@@ -1,0 +1,12 @@
+pip3 install httpie
+http http://127.0.0.1:8000/snippets/
+http http://127.0.0.1:8000/snippets/3/
+http http://127.0.0.1:8000/snippets/ Accept:text/html
+http http://127.0.0.1:8000/snippets/ Accept:application/json
+http --form POST http://127.0.0.1:8000/snippets/ code="print 123"
+http --json POST http://127.0.0.1:8000/snippets/ code="print 456"
+http http://127.0.0.1:8000/snippets/ Accept:application/json
+http POST http://127.0.0.1:8000/snippets/ code="print 123"
+http -a username:password POST http://localhost:8000/snippets/ code="hello django rest api"
+http http://127.0.0.1:8000/snippets/2/highlight/
+
